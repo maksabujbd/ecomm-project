@@ -22,7 +22,7 @@
       <td>{{product.category}}</td>
       <td>{{product.description}}</td>
       <td>
-        <button class="form-button" (click)="deleteProduct(product)">Delete</button>
+        <fa-icon [icon]="icon" (click)="deleteProduct(product)"></fa-icon>
       </td>
     </tr>
     </tbody>
