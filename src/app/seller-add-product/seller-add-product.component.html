@@ -1,5 +1,6 @@
 <div class="add-product">
   <h1>Add New Product</h1>
+  <p class="message-p">{{addProductMessage}}</p>
   <form #addNewProduct="ngForm"
         class="common-form"
         (ngSubmit)="addProduct(addNewProduct.value)"
@@ -40,6 +41,6 @@
            name="image"
            ngModel
     >
-    <button class="form-button">Add</button>
+    <button class="form-button">Add Product</button>
   </form>
 </div>
