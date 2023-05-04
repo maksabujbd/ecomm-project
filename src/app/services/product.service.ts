@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {product} from "../models/data.type";
 
@@ -7,9 +7,15 @@ import {product} from "../models/data.type";
 })
 export class ProductService {
 
-  constructor(private http:HttpClient) { }
-  addProduct(data:product){
+  constructor(private http: HttpClient) {
+  }
+
+  addProduct(data: product) {
     console.warn("product add service called");
     return this.http.post('http://localhost:3000/products', data);
+  }
+
+  getAllProducts() {
+    return this.http.get<product[]>('http://localhost:3000/products');
   }
 }
