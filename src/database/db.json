@@ -28,7 +28,7 @@
   "products": [
     {
       "name": "Samsung M40",
-      "price": "25000",
+      "price": "250000",
       "color": "Black",
       "category": "Mobiles",
       "description": "Samsung product",
@@ -40,7 +40,7 @@
       "price": "120000",
       "color": "Black",
       "category": "Mobiles",
-      "description": "Great",
+      "description": "Great product",
       "image": "https://th.bing.com/th/id/R.ad4cf2e34613430bad38d65098a83023?rik=Ha8ye43zybBU1Q&pid=ImgRaw&r=0",
       "id": 2
     }
