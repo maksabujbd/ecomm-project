@@ -14,11 +14,25 @@ export class SellerAuthComponent implements OnInit{
               private router: Router) {
   }
 
+  showLogin=false;
+
   signUp(data: SignUp) {
     this.seller.userSignUp(data);
   }
 
   ngOnInit(): void {
     this.seller.reloadSeller();
+  }
+
+  openLogin() {
+    this.showLogin = true;
+  }
+
+  openSignUp() {
+    this.showLogin = false;
+  }
+
+  login(data: SignUp) {
+    console.warn(data);
   }
 }
