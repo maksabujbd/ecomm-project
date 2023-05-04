@@ -23,6 +23,7 @@
       <td>{{product.description}}</td>
       <td>
         <fa-icon [icon]="icon" (click)="deleteProduct(product)"></fa-icon>
+        <a class="adjust-update-link" routerLink="/seller-update-product/{{product.id}}"><fa-icon [icon]="editIcon"></fa-icon></a>
       </td>
     </tr>
     </tbody>
