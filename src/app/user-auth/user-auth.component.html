@@ -1,21 +1,43 @@
 <div class="user-auth">
-  <h1>User Sign-up</h1>
-  <form class="common-form" #userSignUpForm="ngForm" (ngSubmit)="signUp(userSignUpForm.value)">
-    <input type="text"
-           placeholder="Enter user name"
-           class="form-input"
-           name="name"
-           ngModel>
-    <input type="text"
-           placeholder="Enter user email"
-           class="form-input"
-           name="email"
-           ngModel>
-    <input type="password"
-           placeholder="Enter password"
-           class="form-input"
-           name="password"
-           ngModel>
-    <button class="form-button">Sign Up</button>
-  </form>
+  <div class="user-signup" *ngIf="!showLogin">
+    <h1>User Sign-up</h1>
+    <form class="common-form" #userSignUpForm="ngForm"
+          (ngSubmit)="signUp(userSignUpForm.value)">
+      <input type="text"
+             placeholder="Enter user name"
+             class="form-input"
+             name="name"
+             ngModel>
+      <input type="text"
+             placeholder="Enter user email"
+             class="form-input"
+             name="email"
+             ngModel>
+      <input type="password"
+             placeholder="Enter password"
+             class="form-input"
+             name="password"
+             ngModel>
+      <button class="form-button">Sign Up</button>
+    <p>Already have account? <a (click)="openLogin()">Click Here</a></p>
+    </form>
+  </div>
+  <div class="user-login" *ngIf="showLogin">
+    <h1>User Login</h1>
+    <form class="common-form" #userLoginForm="ngForm"
+          (ngSubmit)="login(userLoginForm.value)">
+      <input type="text"
+             placeholder="Enter user email"
+             class="form-input"
+             name="email"
+             ngModel>
+      <input type="password"
+             placeholder="Enter password"
+             class="form-input"
+             name="password"
+             ngModel>
+      <button class="form-button">Login</button>
+      <p>Create an Account? <a (click)="openSignUp()">Click Here</a></p>
+    </form>
+  </div>
 </div>

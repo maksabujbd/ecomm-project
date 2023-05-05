@@ -23,7 +23,7 @@ export class UserService {
   }
   userAuthReload(){
     if (localStorage.getItem('user')){
-      this.router.navigate(['/']);
+      this.router.navigate(['/']).then();
     }
   }
 }
