@@ -58,5 +58,19 @@
       "password": "admin",
       "id": 2
     }
+  ],
+  "cart": [
+    {
+      "name": "Samsung M40",
+      "price": "250000",
+      "color": "Black",
+      "category": "Mobiles",
+      "description": "Samsung product",
+      "image": "https://th.bing.com/th/id/R.ad4cf2e34613430bad38d65098a83023?rik=Ha8ye43zybBU1Q&pid=ImgRaw&r=0",
+      "quantity": 1,
+      "userId": 2,
+      "productId": 1,
+      "id": 1
+    }
   ]
 }
