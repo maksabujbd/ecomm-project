@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
-import {signUp} from "../models/data.type";
+import {login, signUp} from "../models/data.type";
 import {Router} from "@angular/router";
 
 @Injectable({
@@ -13,7 +13,8 @@ export class UserService {
 
   userSignUp(user: signUp) {
     return this.http.post('http://localhost:3000/users', user
-      , {observe: 'response'}).subscribe((result) => {
+      , {observe: 'response'})
+      .subscribe((result) => {
       console.warn(result);
       if (result) {
         localStorage.setItem('user', JSON.stringify(result.body));
@@ -21,9 +22,21 @@ export class UserService {
       }
     });
   }
-  userAuthReload(){
-    if (localStorage.getItem('user')){
+
+  userAuthReload() {
+    if (localStorage.getItem('user')) {
       this.router.navigate(['/']).then();
     }
+  }
+
+  userLogin(data: login) {
+    this.http.get<signUp[]>(`http://localhost:3000/users?email=${data.email}&password=${data.password}`
+      , {observe: 'response'})
+      .subscribe((result) => {
+        if (result && result.body) {
+          localStorage.setItem('user', JSON.stringify(result.body[0]));
+          this.router.navigate(['/']).then();
+        }
+      });
   }
 }

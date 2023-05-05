@@ -30,7 +30,7 @@ export class HeaderComponent implements OnInit {
           }
         } else if (localStorage.getItem('user')) {
           let userLocalStorage = localStorage.getItem('user');
-          let userData = userLocalStorage && JSON.parse(userLocalStorage)[0];
+          let userData = userLocalStorage && JSON.parse(userLocalStorage);
           this.userName = userData.name;
           this.menuType = 'user';
         } else {

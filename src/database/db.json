@@ -51,6 +51,12 @@
       "email": "abdul@kader.com",
       "password": "abdul",
       "id": 1
+    },
+    {
+      "name": "admin",
+      "email": "admin@example.com",
+      "password": "admin",
+      "id": 2
     }
   ]
 }
