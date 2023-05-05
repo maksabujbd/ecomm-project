@@ -19,10 +19,8 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.events.subscribe((value: any) => {
-      console.warn(value.url);
       if (value.url) {
         if (localStorage.getItem('seller') && value.url.includes('seller')) {
-          console.warn('in seller area');
           this.menuType = "seller";
           if (localStorage.getItem('seller')) {
             let sellerLocalstorage = localStorage.getItem('seller');
@@ -30,7 +28,6 @@ export class HeaderComponent implements OnInit {
             this.sellerName = sellerData.name
           }
         } else {
-          console.warn('outside seller');
           this.menuType = 'default';
         }
       }
@@ -46,7 +43,6 @@ export class HeaderComponent implements OnInit {
     if (query) {
       const element = query.target as HTMLInputElement;
       this.productService.searchProducts(element.value).subscribe((data) => {
-        console.warn(data);
         if (data.length > 5) {
           data.length = 5;
         }
@@ -57,5 +53,10 @@ export class HeaderComponent implements OnInit {
 
   hideSearch() {
     this.searchResult = undefined;
+  }
+
+  submitSearch(value: string) {
+    console.warn(value);
+    this.route.navigate([`search/${value}`]).then(r => {});
   }
 }

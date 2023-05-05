@@ -3,9 +3,10 @@
   <div *ngIf="menuType==='default'" class="nav-search">
     <input type="text"
            placeholder="Search for product"
+           #searchInput
            (keyup)="searchProduct($event)"
            (blur)="hideSearch()">
-    <button>Search</button>
+    <button (click)="submitSearch(searchInput.value)">Search</button>
     <ul class="suggested-result" *ngIf="searchResult">
       <li *ngFor="let item of searchResult"><a>{{item.name}}</a></li>
     </ul>
