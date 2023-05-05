@@ -11,6 +11,7 @@ import {product} from "../models/data.type";
 export class ProductDetailsComponent implements OnInit {
 
   productData: undefined | product;
+  productQuantity: number = 1;
 
   constructor(private activatedRoute: ActivatedRoute,
               private productService: ProductService) {
@@ -23,5 +24,11 @@ export class ProductDetailsComponent implements OnInit {
     });
   }
 
-
+  handleQuantity(value: string) {
+    if (value === 'plus' && this.productQuantity < 20) {
+      this.productQuantity += 1;
+    } else if (value === 'minus' && this.productQuantity > 1) {
+      this.productQuantity -= 1;
+    }
+  }
 }
