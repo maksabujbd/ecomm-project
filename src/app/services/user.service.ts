@@ -1,4 +1,4 @@
-import {Injectable} from '@angular/core';
+import {EventEmitter, Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {login, signUp} from "../models/data.type";
 import {Router} from "@angular/router";
@@ -8,6 +8,8 @@ import {Router} from "@angular/router";
 })
 export class UserService {
 
+  inValidUserAuth = new EventEmitter<boolean>(false);
+
   constructor(private http: HttpClient, private router: Router) {
   }
 
@@ -15,12 +17,12 @@ export class UserService {
     return this.http.post('http://localhost:3000/users', user
       , {observe: 'response'})
       .subscribe((result) => {
-      console.warn(result);
-      if (result) {
-        localStorage.setItem('user', JSON.stringify(result.body));
-        this.router.navigate(['/']).then();
-      }
-    });
+        console.warn(result);
+        if (result) {
+          localStorage.setItem('user', JSON.stringify(result.body));
+          this.router.navigate(['/']).then();
+        }
+      });
   }
 
   userAuthReload() {
@@ -33,9 +35,12 @@ export class UserService {
     this.http.get<signUp[]>(`http://localhost:3000/users?email=${data.email}&password=${data.password}`
       , {observe: 'response'})
       .subscribe((result) => {
-        if (result && result.body) {
+        if (result && result.body?.length) {
+          this.inValidUserAuth.emit(false);
           localStorage.setItem('user', JSON.stringify(result.body[0]));
           this.router.navigate(['/']).then();
+        } else {
+          this.inValidUserAuth.emit(true);
         }
       });
   }
