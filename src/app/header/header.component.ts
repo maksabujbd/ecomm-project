@@ -14,6 +14,7 @@ export class HeaderComponent implements OnInit {
   sellerName = '';
   userName: string = '';
   searchResult: undefined | product[];
+  cartItems=0;
 
   constructor(private route: Router, private productService: ProductService) {
   }
@@ -37,7 +38,14 @@ export class HeaderComponent implements OnInit {
           this.menuType = 'default';
         }
       }
-    })
+    });
+    let cartData = localStorage.getItem('localCart');
+    if (cartData){
+      this.cartItems = JSON.parse(cartData).length;
+    }
+    this.productService.cartData.subscribe((result)=>{
+      this.cartItems = result.length;
+    });
   }
 
   logout() {
