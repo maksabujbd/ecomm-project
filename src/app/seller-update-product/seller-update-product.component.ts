@@ -15,20 +15,23 @@ export class SellerUpdateProductComponent implements OnInit {
 
   constructor(private route: ActivatedRoute,
               private productService: ProductService,
-              private router:Router) {
+              private router: Router) {
   }
 
-  submit(data: product) {
+  submit(updateProduct: any) {
+    let data: product = updateProduct.value;
     if (this.productData) {
       data.id = this.productData.id;
     }
     this.productService.updateProduct(data).subscribe((result) => {
       if (result) {
         this.updateProductMessage = "Product has updated successfully";
+        updateProduct.form.reset();
       }
     });
     setTimeout(() => {
       this.updateProductMessage = undefined;
+      updateProduct.form.reset();
       this.router.navigate(['seller-home']).then();
     }, 3000);
   }
