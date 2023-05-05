@@ -13,18 +13,18 @@
 <div class="product-list-wrapper">
   <h1>Trendy Products</h1>
   <div class="row">
-    <div class="col-sm-3">
+    <div class="col-sm-3" *ngFor="let item of trendyProducts">
       <div class="product-item">
-        <img src="https://th.bing.com/th/id/R.ad4cf2e34613430bad38d65098a83023?rik=Ha8ye43zybBU1Q&pid=ImgRaw&r=0"
+        <img src="{{item.image}}"
              alt="">
 
         <div class="product-details">
-          <div class="name-head">New Apple Mobile</div>
+          <div class="name-head">{{item.name}}</div>
           <div class="product-price">
-            <h6>Price: 100000</h6>
+            <h6>Price: {{item.price}}</h6>
           </div>
           <div class="product-color">
-            <h6>Color: Blue</h6>
+            <h6>Color: {{item.color}}</h6>
           </div>
         </div>
         <div class="product-footer">
