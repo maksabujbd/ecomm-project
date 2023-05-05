@@ -12,6 +12,7 @@ export class HeaderComponent implements OnInit {
 
   menuType = 'default';
   sellerName = '';
+  userName: string = '';
   searchResult: undefined | product[];
 
   constructor(private route: Router, private productService: ProductService) {
@@ -27,6 +28,11 @@ export class HeaderComponent implements OnInit {
             let sellerData = sellerLocalstorage && JSON.parse(sellerLocalstorage)[0];
             this.sellerName = sellerData.name
           }
+        } else if (localStorage.getItem('user')) {
+          let userLocalStorage = localStorage.getItem('user');
+          let userData = userLocalStorage && JSON.parse(userLocalStorage)[0];
+          this.userName = userData.name;
+          this.menuType = 'user';
         } else {
           this.menuType = 'default';
         }
@@ -63,6 +69,11 @@ export class HeaderComponent implements OnInit {
 
   redirectToDetails(id: number) {
     console.warn('redirect: ' + id);
-    this.route.navigate(['/details/'+id]).then();
+    this.route.navigate(['/details/' + id]).then();
+  }
+
+  userLogout() {
+    localStorage.removeItem('user');
+    this.route.navigate(['user-auth']).then();
   }
 }
