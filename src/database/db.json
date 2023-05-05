@@ -44,5 +44,13 @@
       "image": "https://th.bing.com/th/id/R.ad4cf2e34613430bad38d65098a83023?rik=Ha8ye43zybBU1Q&pid=ImgRaw&r=0",
       "id": 2
     }
+  ],
+  "users": [
+    {
+      "name": "abdul",
+      "email": "abdul@kader.com",
+      "password": "abdul",
+      "id": 1
+    }
   ]
 }

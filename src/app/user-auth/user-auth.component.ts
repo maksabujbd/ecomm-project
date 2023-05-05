@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
 import {signUp} from "../models/data.type";
+import {UserService} from "../services/user.service";
 
 @Component({
   selector: 'app-user-auth',
@@ -8,7 +9,9 @@ import {signUp} from "../models/data.type";
 })
 export class UserAuthComponent {
 
+  constructor(private userService:UserService) {
+  }
   signUp(value: signUp) {
-    console.warn(value);
+    this.userService.userSignUp(value);
   }
 }
