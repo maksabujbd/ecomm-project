@@ -186,22 +186,6 @@
       "email": "admin@example.com",
       "address": "Barura",
       "contact": "01843525395",
-      "totalPrice": 111.32,
-      "userId": 2,
-      "id": 1
-    },
-    {
-      "email": "admin@example.com",
-      "address": "Barura",
-      "contact": "01843525395",
-      "totalPrice": 111.32,
-      "userId": 2,
-      "id": 2
-    },
-    {
-      "email": "admin@example.com",
-      "address": "Barura",
-      "contact": "01843525395",
       "totalPrice": 104.35,
       "userId": 2,
       "id": 3
