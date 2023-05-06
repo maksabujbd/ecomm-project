@@ -28,6 +28,16 @@ export class ProductDetailsComponent implements OnInit {
         items = items.filter((item: product) => productId === item.id.toString());
         this.removeCart = !!items.length;
       }
+      let user = localStorage.getItem('user');
+      if (user) {
+        let userId = user && JSON.parse(user).id;
+        this.productService.getCartList(userId);
+        this.productService.cartData.subscribe((result)=>{
+          let item = result.filter((item:product)=> productId === item.productId?.toString());
+          if (item.length){
+            this.removeCart = true;}
+        });
+      }
     });
   }
 
@@ -61,6 +71,8 @@ export class ProductDetailsComponent implements OnInit {
         this.productService.AddToCart(cartData).subscribe((result) => {
           if (result) {
             alert('Product is added in your cart');
+            this.productService.getCartList(userId);
+            this.removeCart = true;
           }
         })
       }

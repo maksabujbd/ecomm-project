@@ -167,6 +167,42 @@
       "productId": 3,
       "userId": 1,
       "id": 3
+    },
+    {
+      "name": "MX-6",
+      "price": "$4.52",
+      "category": "Mobile",
+      "color": "Green",
+      "description": 3,
+      "image": "http://dummyimage.com/195x100.png/cc0000/ffffff",
+      "quantity": 1,
+      "userId": 1,
+      "productId": 3,
+      "id": 4
+    },
+    {
+      "name": "911",
+      "price": "$7.16",
+      "category": "Car",
+      "color": "Khaki",
+      "description": 4,
+      "image": "http://dummyimage.com/184x100.png/dddddd/000000",
+      "quantity": 1,
+      "userId": 1,
+      "productId": 4,
+      "id": 5
+    },
+    {
+      "name": "Civic",
+      "price": "$2.28",
+      "category": "Car",
+      "color": "Blue",
+      "description": 8,
+      "image": "http://dummyimage.com/195x100.png/ff4444/ffffff",
+      "quantity": 1,
+      "userId": 1,
+      "productId": 8,
+      "id": 6
     }
   ]
 }
