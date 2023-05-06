@@ -27,22 +27,94 @@
   ],
   "products": [
     {
-      "name": "Samsung M40",
-      "price": "250000",
-      "color": "Black",
-      "category": "Mobiles",
-      "description": "Samsung product",
-      "image": "https://th.bing.com/th/id/R.ad4cf2e34613430bad38d65098a83023?rik=Ha8ye43zybBU1Q&pid=ImgRaw&r=0",
-      "id": 1
+      "id": 1,
+      "name": "C-Class",
+      "price": "$9.12",
+      "category": "Mobile",
+      "color": "Puce",
+      "description": 1,
+      "image": "http://dummyimage.com/233x100.png/5fa2dd/ffffff"
     },
     {
-      "name": "iphone 14",
-      "price": "120000",
-      "color": "Black",
-      "category": "Mobiles",
-      "description": "Great product",
-      "image": "https://th.bing.com/th/id/R.ad4cf2e34613430bad38d65098a83023?rik=Ha8ye43zybBU1Q&pid=ImgRaw&r=0",
-      "id": 2
+      "id": 2,
+      "name": "Lancer",
+      "price": "$4.35",
+      "category": "Car",
+      "color": "Teal",
+      "description": 2,
+      "image": "http://dummyimage.com/205x100.png/5fa2dd/ffffff"
+    },
+    {
+      "id": 3,
+      "name": "MX-6",
+      "price": "$4.52",
+      "category": "Mobile",
+      "color": "Green",
+      "description": 3,
+      "image": "http://dummyimage.com/195x100.png/cc0000/ffffff"
+    },
+    {
+      "id": 4,
+      "name": "911",
+      "price": "$7.16",
+      "category": "Car",
+      "color": "Khaki",
+      "description": 4,
+      "image": "http://dummyimage.com/184x100.png/dddddd/000000"
+    },
+    {
+      "id": 5,
+      "name": "A8",
+      "price": "$8.23",
+      "category": "Car",
+      "color": "Maroon",
+      "description": 5,
+      "image": "http://dummyimage.com/238x100.png/cc0000/ffffff"
+    },
+    {
+      "id": 6,
+      "name": "Skylark",
+      "price": "$9.36",
+      "category": "Person",
+      "color": "Red",
+      "description": 6,
+      "image": "http://dummyimage.com/158x100.png/cc0000/ffffff"
+    },
+    {
+      "id": 7,
+      "name": "R-Class",
+      "price": "$9.83",
+      "category": "Mobile",
+      "color": "Pink",
+      "description": 7,
+      "image": "http://dummyimage.com/199x100.png/dddddd/000000"
+    },
+    {
+      "id": 8,
+      "name": "Civic",
+      "price": "$2.28",
+      "category": "Car",
+      "color": "Blue",
+      "description": 8,
+      "image": "http://dummyimage.com/195x100.png/ff4444/ffffff"
+    },
+    {
+      "id": 9,
+      "name": "A3",
+      "price": "$5.15",
+      "category": "Car",
+      "color": "Teal",
+      "description": 9,
+      "image": "http://dummyimage.com/101x100.png/cc0000/ffffff"
+    },
+    {
+      "id": 10,
+      "name": "Highlander",
+      "price": "$5.56",
+      "category": "Car",
+      "color": "Aquamarine",
+      "description": 10,
+      "image": "http://dummyimage.com/118x100.png/cc0000/ffffff"
     }
   ],
   "users": [
@@ -61,16 +133,40 @@
   ],
   "cart": [
     {
-      "name": "Samsung M40",
-      "price": "250000",
-      "color": "Black",
-      "category": "Mobiles",
-      "description": "Samsung product",
-      "image": "https://th.bing.com/th/id/R.ad4cf2e34613430bad38d65098a83023?rik=Ha8ye43zybBU1Q&pid=ImgRaw&r=0",
+      "name": "C-Class",
+      "price": "$9.12",
+      "category": "Mobile",
+      "color": "Puce",
+      "description": 1,
+      "image": "http://dummyimage.com/233x100.png/5fa2dd/ffffff",
+      "quantity": 1,
+      "productId": 1,
+      "userId": 2,
+      "id": 1
+    },
+    {
+      "name": "Lancer",
+      "price": "$4.35",
+      "category": "Car",
+      "color": "Teal",
+      "description": 2,
+      "image": "http://dummyimage.com/205x100.png/5fa2dd/ffffff",
       "quantity": 1,
       "userId": 2,
-      "productId": 1,
-      "id": 1
+      "productId": 2,
+      "id": 2
+    },
+    {
+      "name": "MX-6",
+      "price": "$4.52",
+      "category": "Mobile",
+      "color": "Green",
+      "description": 3,
+      "image": "http://dummyimage.com/195x100.png/cc0000/ffffff",
+      "quantity": 1,
+      "productId": 3,
+      "userId": 1,
+      "id": 3
     }
   ]
 }
