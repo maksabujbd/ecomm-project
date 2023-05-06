@@ -1,0 +1,47 @@
+.cart-page {
+  margin-top: 40px;
+  margin-bottom: 60px;
+}
+
+.cart-page h1 {
+  text-align: center;
+}
+.details {
+  border: 1px solid #ddd;
+}
+
+.details img {
+  height: 100px;
+}
+
+.details ul {
+  display: flex;
+  list-style-type: none;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 0 20px;
+  border-bottom: 1px solid #ddd;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.summary {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.summary h3 {
+  text-align: center;
+}
+
+.summary ul {
+  list-style-type: none;
+  padding: 5%;
+  border: 1px solid #ddd;
+}
+
+.summary ul li {
+  display: flex;
+  justify-content: space-between;
+}
+

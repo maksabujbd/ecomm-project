@@ -18,6 +18,7 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
 import { UserAuthComponent } from './user-auth/user-auth.component';
 import { FooterComponent } from './footer/footer.component';
 import {NgOptimizedImage} from "@angular/common";
+import { CartPageComponent } from './cart-page/cart-page.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import {NgOptimizedImage} from "@angular/common";
     ProductDetailsComponent,
     UserAuthComponent,
     FooterComponent,
+    CartPageComponent,
   ],
     imports: [
         BrowserModule,
