@@ -20,6 +20,7 @@ import { FooterComponent } from './footer/footer.component';
 import {NgOptimizedImage} from "@angular/common";
 import { CartPageComponent } from './cart-page/cart-page.component';
 import { CheckoutComponent } from './checkout/checkout.component';
+import { MyOrdersComponent } from './my-orders/my-orders.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { CheckoutComponent } from './checkout/checkout.component';
     FooterComponent,
     CartPageComponent,
     CheckoutComponent,
+    MyOrdersComponent,
   ],
     imports: [
         BrowserModule,
