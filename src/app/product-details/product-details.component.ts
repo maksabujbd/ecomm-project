@@ -13,6 +13,7 @@ export class ProductDetailsComponent implements OnInit {
   productData: undefined | product;
   productQuantity: number = 1;
   removeCart = false;
+  cartData: product | undefined;
 
   constructor(private activatedRoute: ActivatedRoute,
               private productService: ProductService) {
@@ -32,10 +33,12 @@ export class ProductDetailsComponent implements OnInit {
       if (user) {
         let userId = user && JSON.parse(user).id;
         this.productService.getCartList(userId);
-        this.productService.cartData.subscribe((result)=>{
-          let item = result.filter((item:product)=> productId === item.productId?.toString());
-          if (item.length){
-            this.removeCart = true;}
+        this.productService.cartData.subscribe((result) => {
+          let item = result.filter((item: product) => productId === item.productId?.toString());
+          if (item.length) {
+            this.cartData = item[0];
+            this.removeCart = true;
+          }
         });
       }
     });
@@ -53,21 +56,17 @@ export class ProductDetailsComponent implements OnInit {
     if (this.productData) {
       this.productData.quantity = this.productQuantity;
       if (!localStorage.getItem('user')) {
-        console.warn(this.productData);
         this.productService.locallyAddToCart(this.productData);
         this.removeCart = true;
       } else {
-        console.warn('user logged in');
         let user = localStorage.getItem('user');
         let userId = user && JSON.parse(user).id;
-        console.warn("userId: ", userId);
         let cartData: cart = {
           ...this.productData,
           userId: userId,
           productId: this.productData.id
         };
         delete cartData.id;
-        console.warn(cartData);
         this.productService.AddToCart(cartData).subscribe((result) => {
           if (result) {
             alert('Product is added in your cart');
@@ -80,7 +79,17 @@ export class ProductDetailsComponent implements OnInit {
   }
 
   removeFromCart(productId: number) {
-    this.productService.removeItemFromCart(productId);
+    if (!localStorage.getItem('user')) {
+      this.productService.removeItemFromCart(productId);
+      this.removeCart = false;
+    } else {
+      let user = localStorage.getItem('user');
+      let userId = user && JSON.parse(user).id;
+      this.cartData && this.productService.removeFromCart(this.cartData?.id)
+        .subscribe((result) => {
+          this.productService.getCartList(userId);
+        });
+    }
     this.removeCart = false;
   }
 }
