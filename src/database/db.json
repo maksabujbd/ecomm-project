@@ -204,5 +204,15 @@
       "productId": 3,
       "id": 9
     }
+  ],
+  "orders": [
+    {
+      "email": "admin@example.com",
+      "address": "Barura",
+      "contact": "01843525395",
+      "totalPrice": 111.32,
+      "userId": 2,
+      "id": 1
+    }
   ]
 }

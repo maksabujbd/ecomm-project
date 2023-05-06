@@ -1,6 +1,6 @@
 import {EventEmitter, Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
-import {cart, product} from "../models/data.type";
+import {cart, order, product} from "../models/data.type";
 
 @Injectable({
   providedIn: 'root'
@@ -91,6 +91,10 @@ export class ProductService {
     let user = localStorage.getItem('user');
     let userId = user && JSON.parse(user).id;
     return this.http.get<cart[]>('http://localhost:3000/cart?userId='+userId);
+  }
+
+  orderNow(data:order){
+    return this.http.post('http://localhost:3000/orders', data);
   }
 }
 
