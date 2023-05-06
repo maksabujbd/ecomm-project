@@ -6,11 +6,11 @@
 .user-auth h1 {
   margin-bottom: 50px;
   margin-top: 80px;
-  color: blueviolet;
+  color: var(--primary-blueviolet);
   text-align: center;
 }
 
 .common-form a {
-  color: blueviolet;
+  color: var(--primary-blueviolet);
   cursor: pointer;
 }

@@ -1,4 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+@import url(./assets/css/_variables.css);
+
 body {
   font-family: sans-serif;
 }
@@ -21,7 +23,7 @@ body {
   margin-bottom: 20px;
   padding-left: 10px;
   border: 1px solid blueviolet;
-  color: blueviolet;
+  color: var(--primary-blueviolet);
 }
 
 .form-button {

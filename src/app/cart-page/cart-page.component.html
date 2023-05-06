@@ -20,6 +20,7 @@
         <li><span>Delivery Charge</span><span>{{cartSummary.deliveryCharge| currency}}</span></li>
         <li><span>Discount</span><span>{{cartSummary.discount| currency}}</span></li>
         <li><span><h4>Total</h4></span><span><h4>{{cartSummary.total| currency}}</h4></span></li>
+        <button class="form-button check-out-btn" (click)="checkout()">Checkout</button>
       </ul>
     </div>
   </div>

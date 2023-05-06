@@ -1,0 +1,11 @@
+.checkout{
+  text-align: center;
+}
+.checkout h1{
+  margin: 50px 0;
+  color: var(--primary-blueviolet);
+}
+
+.checkout h3 {
+  margin: 15px 0;
+}

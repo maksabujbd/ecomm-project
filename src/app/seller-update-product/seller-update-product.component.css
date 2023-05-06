@@ -1,5 +1,5 @@
 h1 {
-  color: blueviolet;
+  color: var(--primary-blueviolet);
   text-align: center;
 }
 

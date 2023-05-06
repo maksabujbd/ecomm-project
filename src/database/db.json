@@ -133,18 +133,6 @@
   ],
   "cart": [
     {
-      "name": "Lancer",
-      "price": 4.35,
-      "category": "Car",
-      "color": "Teal",
-      "description": 2,
-      "image": "http://dummyimage.com/205x100.png/5fa2dd/ffffff",
-      "quantity": 1,
-      "userId": 2,
-      "productId": 2,
-      "id": 2
-    },
-    {
       "name": "MX-6",
       "price": 4.52,
       "category": "Mobile",
@@ -191,18 +179,6 @@
       "userId": 1,
       "productId": 8,
       "id": 6
-    },
-    {
-      "name": "C-Class",
-      "price": 9.12,
-      "category": "Mobile",
-      "color": "Puce",
-      "description": 1,
-      "image": "http://dummyimage.com/233x100.png/5fa2dd/ffffff",
-      "quantity": 1,
-      "productId": 1,
-      "userId": 2,
-      "id": 7
     },
     {
       "name": "Civic",

@@ -6,6 +6,7 @@
 .cart-page h1 {
   text-align: center;
 }
+
 .details {
   border: 1px solid #ddd;
 }
@@ -43,5 +44,9 @@
 .summary ul li {
   display: flex;
   justify-content: space-between;
+}
+
+.check-out-btn {
+  width: 100%;
 }
 
