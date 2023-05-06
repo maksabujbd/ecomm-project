@@ -3,12 +3,12 @@
   <div class="row">
     <div class="col-sm-9 details">
       <ul *ngFor="let item of cartData">
-        <li><img src="{{item.image}}" alt=""></li>
+        <li><a routerLink="/details/{{item.productId}}"><img src="{{item.image}}" alt=""></a></li>
         <li>{{item.name}}</li>
         <li>Price: {{item.price}}</li>
         <li>Quantity: {{item.quantity}}</li>
         <li>
-          <button class="form-button">Remove From Cart</button>
+          <button class="form-button" (click)="removeCart(item.id)">Remove From Cart</button>
         </li>
       </ul>
     </div>
