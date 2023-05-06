@@ -34,3 +34,11 @@ export interface cart {
   productId: number | undefined
 }
 
+export interface cartSummary {
+  price: number,
+  discount: number,
+  tax: number,
+  deliveryCharge: number,
+  total: number
+}
+

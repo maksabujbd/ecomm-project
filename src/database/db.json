@@ -29,7 +29,7 @@
     {
       "id": 1,
       "name": "C-Class",
-      "price": "$9.12",
+      "price": 9.12,
       "category": "Mobile",
       "color": "Puce",
       "description": 1,
@@ -38,7 +38,7 @@
     {
       "id": 2,
       "name": "Lancer",
-      "price": "$4.35",
+      "price": 4.35,
       "category": "Car",
       "color": "Teal",
       "description": 2,
@@ -47,7 +47,7 @@
     {
       "id": 3,
       "name": "MX-6",
-      "price": "$4.52",
+      "price": 4.52,
       "category": "Mobile",
       "color": "Green",
       "description": 3,
@@ -56,7 +56,7 @@
     {
       "id": 4,
       "name": "911",
-      "price": "$7.16",
+      "price": 7.16,
       "category": "Car",
       "color": "Khaki",
       "description": 4,
@@ -65,7 +65,7 @@
     {
       "id": 5,
       "name": "A8",
-      "price": "$8.23",
+      "price": 8.23,
       "category": "Car",
       "color": "Maroon",
       "description": 5,
@@ -74,7 +74,7 @@
     {
       "id": 6,
       "name": "Skylark",
-      "price": "$9.36",
+      "price": 9.36,
       "category": "Person",
       "color": "Red",
       "description": 6,
@@ -83,7 +83,7 @@
     {
       "id": 7,
       "name": "R-Class",
-      "price": "$9.83",
+      "price": 9.83,
       "category": "Mobile",
       "color": "Pink",
       "description": 7,
@@ -92,7 +92,7 @@
     {
       "id": 8,
       "name": "Civic",
-      "price": "$2.28",
+      "price": 2.28,
       "category": "Car",
       "color": "Blue",
       "description": 8,
@@ -101,7 +101,7 @@
     {
       "id": 9,
       "name": "A3",
-      "price": "$5.15",
+      "price": 5.15,
       "category": "Car",
       "color": "Teal",
       "description": 9,
@@ -110,7 +110,7 @@
     {
       "id": 10,
       "name": "Highlander",
-      "price": "$5.56",
+      "price": 5.56,
       "category": "Car",
       "color": "Aquamarine",
       "description": 10,
@@ -133,20 +133,8 @@
   ],
   "cart": [
     {
-      "name": "C-Class",
-      "price": "$9.12",
-      "category": "Mobile",
-      "color": "Puce",
-      "description": 1,
-      "image": "http://dummyimage.com/233x100.png/5fa2dd/ffffff",
-      "quantity": 1,
-      "productId": 1,
-      "userId": 2,
-      "id": 1
-    },
-    {
       "name": "Lancer",
-      "price": "$4.35",
+      "price": 4.35,
       "category": "Car",
       "color": "Teal",
       "description": 2,
@@ -158,7 +146,7 @@
     },
     {
       "name": "MX-6",
-      "price": "$4.52",
+      "price": 4.52,
       "category": "Mobile",
       "color": "Green",
       "description": 3,
@@ -170,7 +158,7 @@
     },
     {
       "name": "MX-6",
-      "price": "$4.52",
+      "price": 4.52,
       "category": "Mobile",
       "color": "Green",
       "description": 3,
@@ -182,7 +170,7 @@
     },
     {
       "name": "911",
-      "price": "$7.16",
+      "price": 7.16,
       "category": "Car",
       "color": "Khaki",
       "description": 4,
@@ -194,7 +182,7 @@
     },
     {
       "name": "Civic",
-      "price": "$2.28",
+      "price": 2.28,
       "category": "Car",
       "color": "Blue",
       "description": 8,
@@ -206,7 +194,7 @@
     },
     {
       "name": "C-Class",
-      "price": "$9.12",
+      "price": 9.12,
       "category": "Mobile",
       "color": "Puce",
       "description": 1,
@@ -218,7 +206,7 @@
     },
     {
       "name": "Civic",
-      "price": "$2.28",
+      "price": 2.28,
       "category": "Car",
       "color": "Blue",
       "description": 8,
@@ -227,6 +215,18 @@
       "userId": 2,
       "productId": 8,
       "id": 8
+    },
+    {
+      "name": "MX-6",
+      "price": 4.52,
+      "category": "Mobile",
+      "color": "Green",
+      "description": 3,
+      "image": "http://dummyimage.com/195x100.png/cc0000/ffffff",
+      "quantity": 2,
+      "userId": 2,
+      "productId": 3,
+      "id": 9
     }
   ]
 }
