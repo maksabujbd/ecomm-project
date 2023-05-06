@@ -17,18 +17,18 @@
       <span>Action</span>
     </div>
   </div>
-  <div class="row order-data">
+  <div class="row order-data" *ngFor="let item of orderData">
     <div class="col-sm-2">
       <span>Order</span>
     </div>
     <div class="col-sm-2">
-      <span>Order Id</span>
+      <span>#{{item.id}}</span>
     </div>
     <div class="col-sm-2">
-      <span>Price</span>
+      <span>{{item.totalPrice}}</span>
     </div>
     <div class="col-sm-2">
-      <span>Status</span>
+      <span>In Progress</span>
     </div>
     <div class="col-sm-2">
       <span><button class="form-button">Cancel Order</button></span>

@@ -179,30 +179,6 @@
       "userId": 1,
       "productId": 8,
       "id": 6
-    },
-    {
-      "name": "Civic",
-      "price": 2.28,
-      "category": "Car",
-      "color": "Blue",
-      "description": 8,
-      "image": "http://dummyimage.com/195x100.png/ff4444/ffffff",
-      "quantity": 1,
-      "userId": 2,
-      "productId": 8,
-      "id": 8
-    },
-    {
-      "name": "MX-6",
-      "price": 4.52,
-      "category": "Mobile",
-      "color": "Green",
-      "description": 3,
-      "image": "http://dummyimage.com/195x100.png/cc0000/ffffff",
-      "quantity": 2,
-      "userId": 2,
-      "productId": 3,
-      "id": 9
     }
   ],
   "orders": [
@@ -215,9 +191,9 @@
       "id": 1
     },
     {
-      "email": "",
-      "address": "",
-      "contact": "",
+      "email": "admin@example.com",
+      "address": "Barura",
+      "contact": "01843525395",
       "totalPrice": 111.32,
       "userId": 2,
       "id": 2
@@ -226,7 +202,7 @@
       "email": "admin@example.com",
       "address": "Barura",
       "contact": "01843525395",
-      "totalPrice": 111.32,
+      "totalPrice": 104.35,
       "userId": 2,
       "id": 3
     }
