@@ -9,18 +9,31 @@
                class="form-input"
                name="email"
                placeholder="Enter your email"
-               ngModel>
+               ngModel
+               #email="ngModel"
+               required
+               email
+        >
+        <p class="error-valid"><span *ngIf="email.invalid && email.touched">Please enter a valid value</span></p>
         <input type="text"
                class="form-input"
                name="address"
                placeholder="Enter your address"
-               ngModel>
+               ngModel
+               #address="ngModel"
+               required>
+        <p class="error-valid"><span *ngIf="address.invalid && email.touched">Please enter a valid address</span></p>
         <input type="text"
                class="form-input"
                name="contact"
                placeholder="Enter your contact details"
-               ngModel>
-        <button class="form-button">Order Now</button>
+               ngModel
+               #contact="ngModel"
+               required
+        >
+        <p class="error-valid"><span *ngIf="contact.invalid && contact.touched">Please enter your valid contact</span>
+        </p>
+        <button class="form-button" [disabled]="orderData.invalid">Order Now</button>
       </form>
     </div>
     <div class="col-sm-5">

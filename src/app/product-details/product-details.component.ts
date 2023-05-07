@@ -20,6 +20,7 @@ export class ProductDetailsComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    console.warn("details called");
     let productId = this.activatedRoute.snapshot.paramMap.get('productId');
     productId && this.productService.getProduct(productId).subscribe((result) => {
       this.productData = result;

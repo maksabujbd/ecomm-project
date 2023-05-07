@@ -7,18 +7,28 @@
              placeholder="Enter user name"
              class="form-input"
              name="name"
-             ngModel>
+             ngModel
+             #name="ngModel"
+             required>
+      <p class="error-valid"><span *ngIf="name.invalid && name.touched">Please enter your valid name</span></p>
       <input type="text"
              placeholder="Enter user email"
              class="form-input"
              name="email"
-             ngModel>
+             ngModel
+             #email="ngModel"
+             required
+             email>
+      <p class="error-valid"><span *ngIf="email.invalid && email.touched">Please enter a valid email</span></p>
       <input type="password"
              placeholder="Enter password"
              class="form-input"
              name="password"
-             ngModel>
-      <button class="form-button">Sign Up</button>
+             ngModel
+             #password="ngModel"
+             required>
+      <p class="error-valid"><span *ngIf="password.invalid && password.touched">Please enter a valid password</span></p>
+      <button class="form-button" [disabled]="userSignUpForm.invalid">Sign Up</button>
       <p>Already have account? <a (click)="openLogin()">Click Here</a></p>
     </form>
   </div>

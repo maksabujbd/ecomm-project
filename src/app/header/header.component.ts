@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
 import {ProductService} from "../services/product.service";
 import {product} from "../models/data.type";
+import {Location} from "@angular/common";
 
 @Component({
   selector: 'app-header',
@@ -14,9 +15,11 @@ export class HeaderComponent implements OnInit {
   sellerName = '';
   userName: string = '';
   searchResult: undefined | product[];
-  cartItems=0;
+  cartItems = 0;
 
-  constructor(private route: Router, private productService: ProductService) {
+  constructor(private route: Router,
+              private productService: ProductService,
+              private location: Location) {
   }
 
   ngOnInit(): void {
@@ -42,10 +45,10 @@ export class HeaderComponent implements OnInit {
       }
     });
     let cartData = localStorage.getItem('localCart');
-    if (cartData){
+    if (cartData) {
       this.cartItems = JSON.parse(cartData).length;
     }
-    this.productService.cartData.subscribe((result)=>{
+    this.productService.cartData.subscribe((result) => {
       this.cartItems = result.length;
     });
   }
@@ -73,13 +76,17 @@ export class HeaderComponent implements OnInit {
 
   submitSearch(value: string) {
     console.warn(value);
-    this.route.navigate([`search/${value}`]).then(r => {
-    });
+    if (value) {
+      this.route.navigate([`search/${value}`]).then(r => {
+      });
+    }
   }
 
   redirectToDetails(id: number) {
     console.warn('redirect: ' + id);
-    this.route.navigate(['/details/' + id]).then();
+    this.route.navigate(['/details/' + id]).then(() => {
+      window.location.reload();
+    });
   }
 
   userLogout() {
